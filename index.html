@@ -174,17 +174,24 @@
           <section>
             <h2>Countable Fan Tightness</h2>
             <p>
-              A space has <b>countable (dense) fan tightness at a point</b>
+              A space has <b>countable fan tightness at a point</b>
               \(x\) if
               \(S_{fin}(\mathcal B_x,\mathcal B_x)\) holds, where \(\mathcal B_x\)
-              denotes the (dense) sets which have \(x\) as a limit point.
+              denotes the sets which have \(x\) as a limit point.
+            </p>
+            <p class="fragment">
+              A space has <b>countable dense fan tightness at a point</b>
+              \(x\) if
+              \(S_{fin}(\mathcal D,\mathcal B_x)\) holds.
             </p>
             <p class="fragment">
               A space has <b>countable (dense) fan tightness</b>
               if it has countable (dense) fan tightness at every point.
               Denote this with <b>\(C(D)FT\)</b>.
             </p>
-            <p class="fragment">
+          </section>
+          <section>
+            <p>
               Barman/Dow (2011) showed that the following are equivalent:
             </p>
             <ul>
@@ -201,15 +208,25 @@
             </ul>
           </section>
           <section>
-            <h2>Countable Fan Tightness Game</h2>
+            <h2>Countable (Dense) Fan Tightness Game</h2>
             <p>
-              We may similarly consider \(G_{fin}(\mathcal B_x,\mathcal B_x)\).
-              If \(\mathcal{II}\uparrow G_{fin}(\mathcal B_x,\mathcal B_x)\)
-              for each point \(x\)
-              then we write \(C(D)FT^{+}\)
+              We may similarly consider game versions of these properties.
             </p>
             <p class="fragment">
-              Slightly modifying the proof of the previous result, TFAE:
+              If \(\mathcal{II}\uparrow G_{fin}(\mathcal B_x,\mathcal B_x)\)
+              for each point \(x\)
+              then we write \(CFT^{+}\).
+            </p>
+            <p class="fragment">
+              If \(\mathcal{II}\uparrow G_{fin}(\mathcal D,\mathcal B_x)\)
+              for each point \(x\)
+              then we write \(CDFT^{+}\).
+            </p>
+          </section>
+          <section>
+            <p>
+              Slightly modifying the proof of the previous result,
+              the following are equivalent:
             </p>
             <ul>
               <li class="fragment">
@@ -219,7 +236,7 @@
                 \(X\) is separable and \(CDFT^{+}\)
               </li>
               <li class="fragment">
-                \(\mathcal{II}\uparrow G_{fin}(\mathcal B_x,\mathcal B_x)\)
+                \(\mathcal{II}\uparrow G_{fin}(\mathcal D,\mathcal B_x)\)
                 for each point \(x\) in some countable dense subset of \(X\)
               </li>
             </ul>
@@ -229,7 +246,7 @@
           </section>
           <section>
             <p>
-              This also holds for Markov strategies:
+              These equivalencies also hold for Markov strategies.
             </p>
             <ul>
               <li>
@@ -239,7 +256,7 @@
                 \(X\) is separable and \(CDFT^{+mark}\)
               </li>
               <li>
-                \(\mathcal{II}\uparrow_{mark} G_{fin}(\mathcal B_x,\mathcal B_x)\)
+                \(\mathcal{II}\uparrow_{mark} G_{fin}(\mathcal D,\mathcal B_x)\)
                 for each point \(x\) in some countable dense subset of \(X\)
               </li>
             </ul>
@@ -300,33 +317,51 @@
           <section>
             <h4>Idea of proof</h4>
             <p>
-              There's a natural corespondance between members of
+              There's a natural corespondence between members of
               \(\Omega\) (\(\omega\) covers of \(X\))
               and members of \(\mathcal B_{\mathbf 0}\)
               (subsets of \(C(X)\) containing \(\mathbf 0\) as a limit point).
             </p>
             <p class="fragment">
-              Given an \(\omega\) cover \(\mathcal U\),
-              we may assume it consists of co-zero sets.
-              For \(U\in\mathcal U\), let \(\mathbf x_U\in C(X)\) satisfy
-              \(U=\mathbf x_U^{-1}[(-1,1)]\). It follows
+              For \(\mathcal U\in\Omega\), let
               \(
-                \mathbf 0
-                  \in
-                cl(\{\frac{1}{2^n}\mathbf x_U:U\in\mathcal U,n&lt;\omega\})
+                B
+                  =
+                \{
+                  \mathbf x\in C(X)
+                :
+                  \mathbf x[X\setminus U]=\{1\} \text{ for some }
+                  U\in\mathcal U
+                \}
               \).
             </p>
             <p class="fragment">
-              Likewise, given \(\mathbf 0\in cl(B)\), let
+              Any neighborhood in \(C(X)\) may only restrict some
+              finite subset \(F\subseteq X\).
+              Since \(F\) is contained in some
+              \(U\in\mathcal U\), this witnesses a member of \(B\)
+              guaranteed to be in that neighborhood. So, \(B\in\mathcal B_0\).
+            </p>
+          </section>
+          <section>
+            <p>
+              Likewise, given \(B\in\mathcal B_{\mathbf 0}\), let
               \(
                 \mathcal U_B
                   =
                 \{
                   \mathbf x^{-1}[(-\frac{1}{2^n},\frac{1}{2^n})]
                 :
-                  \mathbf x\in B, n&lt;\omega
+                  \mathbf x\in B
                 \}
-              \); it follows \(\mathcal U_B\) is an \(\omega\) cover.
+              \).
+            </p>
+            <p class="fragment">
+              For each finite set \(F\subseteq X\), the neighborhood of
+              \(\mathbf 0\) restricting \(F\) to \((-\frac{1}{2^n},\frac{1}{2^n})\)
+              contains some \(\mathbf x\in B\). Thus
+              \(F\subseteq\mathbf x^{-1}[(-\frac{1}{2^n},\frac{1}{2^n})]\in\mathcal U_B\).
+              \(\Box\)
             </p>
           </section>
           <section>
@@ -458,8 +493,8 @@
               </li>
             </ol>
             <p class="fragment">
-              Note that a negative answer to #1 and a positive answer to #2
-              would yield an \(SS^+,\neg SS^{+mark}\) space.
+              Note that a simultaneous negative answer to #1 and positive answer to #2
+              would be an \(SS^+,\neg SS^{+mark}\) space.
             </p>
           </section>
         </section>
