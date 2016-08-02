@@ -300,7 +300,7 @@
               Assume all spaces from here on are completely regular.
             </p>
             <p>
-              Let \(C(X)\) be the subspace of \(\mathbb R^X\) consisting
+              Let \(C_p(X)\) be the subspace of \(\mathbb R^X\) consisting
               of continuous functions.
             </p>
             <p class="fragment">
@@ -310,18 +310,19 @@
               <h4>Theorem</h4>
               <p>
                 \(X\) is \(\Omega M\) if and only if
-                \(C(X)\) is \(CFT\).
+                \(C_p(X)\) is \(CFT\) if and only if
+                \(C_p(x)\) is \(CDFT\).
               </p>
             </ul>
           </section>
           <section>
-            <h4>Idea of proof</h4>
+            <h4>Idea of proof (Sakai?)</h4>
             <p>
               There's a natural corespondence between members of
-              \(\Omega\) (\(\omega\) covers of \(X\)), members
-              of \(\mathcal D\) (dense subsets of \(C(X)\)),
+              \(\Omega\) (\(\omega\)-covers of \(X\)), members
+              of \(\mathcal D\) (dense subsets of \(C_p(X)\)),
               and members of \(\mathcal B_{\mathbf 0}\)
-              (subsets of \(C(X)\) containing \(\mathbf 0\) as a limit point).
+              (subsets of \(C_p(X)\) containing \(\mathbf 0\) as a limit point).
             </p>
             <p class="fragment">
               For \(\mathcal U\in\Omega\), let
@@ -329,7 +330,7 @@
                 D
                   =
                 \{
-                  \mathbf x\in C(X)
+                  \mathbf x\in C_p(X)
                 :
                   \mathbf x[X\setminus U]=\{1\} \text{ for some }
                   U\in\mathcal U
@@ -337,7 +338,7 @@
               \).
             </p>
             <p class="fragment">
-              Any neighborhood in \(C(X)\) may only restrict some
+              Any neighborhood in \(C_p(X)\) may only restrict some
               finite subset \(F\subseteq X\).
               Since \(F\) is contained in some
               \(U\in\mathcal U\), this witnesses a member of \(D\)
@@ -364,10 +365,6 @@
               \(F\subseteq\mathbf x^{-1}[(-\frac{1}{2^n},\frac{1}{2^n})]\in\mathcal U_B\).
               \(\Box\)
             </p>
-            <p class="fragment">
-              A consequence of this proof is that \(CFT \Leftrightarrow CDFT\)
-              for spaces of the form \(C(X)\).
-            </p>
           </section>
           <section>
             <p>
@@ -376,17 +373,17 @@
             <ul>
               <li class="fragment">
                 If \(X\) is \(\sigma\)-compact and metrizable, then
-                \(C(X)\) is \(CFT^{+}\).
+                \(C_p(X)\) is \(CFT^{+}\).
               </li>
             </ul>
             <p class="fragment">
               Digging into the proof, they really showed:
                   If \(X\) is \(\sigma\)-compact, then
-                  \(C(X)\) is \(CFT^{+mark}\).
+                  \(C_p(X)\) is \(CFT^{+mark}\).
             </p>
             <p class="fragment">
               As a result, any separable
-              subspace of such a \(C(X)\) must be \(SS^{+mark}\).
+              subspace of such a \(C_p(X)\) must be \(SS^{+mark}\).
             </p>
           </section>
           <section>
@@ -447,13 +444,13 @@
             </p>
             <ul class="fragment">
               <li>
-                \(X\) is \(\Omega M\) iff \(C(X)\) is \(C(D)FT\)
+                \(X\) is \(\Omega M\) iff \(C_p(X)\) is \(C(D)FT\)
               </li>
               <li>
-                \(X\) is \(\Omega M^{+}\) iff \(C(X)\) is \(C(D)FT^{+}\)
+                \(X\) is \(\Omega M^{+}\) iff \(C_p(X)\) is \(C(D)FT^{+}\)
               </li>
               <li>
-                \(X\) is \(\Omega M^{+mark}\) iff \(C(X)\) is \(C(D)FT^{+mark}\)
+                \(X\) is \(\Omega M^{+mark}\) iff \(C_p(X)\) is \(C(D)FT^{+mark}\)
               </li>
             </ul>
           </section>
@@ -470,18 +467,17 @@
                 strategy, showing \(\Omega M^+\).
               </li>
               <li class="fragment">
-                It follows \(C(\omega_1\cup\{\infty\})\) is \(CFT^+\) but not
+                It follows \(C_p(\omega_1\cup\{\infty\})\) is \(CFT^+\) but not
                 \(CFT^{+mark}\).
               </li>
             </ul>
             <p class="fragment">
-              Unfortunately, \(C(\omega_1\cup\{\infty\})\) isn't separable,
-              or even ccc.
+              Unfortunately, \(C_p(\omega_1\cup\{\infty\})\) isn't separable.
             </p>
             <ul>
               <li class="fragment">
                 Let \(X\) be non-\(\sigma\)-compact but \(\Omega M^+\).
-                Could \(C(X)\) be separable? This would be a \(SS^+\),
+                Could \(C_p(X)\) be separable? This would be a \(SS^+\),
                 \(\neg SS^{+mark}\) space.
               </li>
             </ul>
@@ -502,6 +498,8 @@
                 Doyel Barman, Alan Dow, Selective separability and SS+.
                 Topology Proc. 37 (2011), 181–204.
               </li>
+              <li>Sakai</li>
+              <li>Scheepers</li>
             </ul>
           </section>
           <section>
